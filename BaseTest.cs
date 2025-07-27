@@ -21,8 +21,6 @@ namespace _Task__Page_Object_Pattern
             driver = new ChromeDriver();
             driver.Manage().Window.Maximize();
             indexPage = new IndexPage(driver);
-
-            indexPage.Open();
         }
 
         [TearDown]

@@ -11,6 +11,7 @@ namespace _Task__Page_Object_Pattern
         public void ValidateJobSearchByCriteria(string language, string locationName)
         {
             var isWordPresent = indexPage
+                .Open()
                 .ClickCareersLink()
                 .WriteInKeywordsField(language)
                 .SelectLocation(locationName)
