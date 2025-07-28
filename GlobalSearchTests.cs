@@ -6,12 +6,13 @@ using System.Threading.Tasks;
 
 namespace _Task__Page_Object_Pattern
 {
-    internal class GlobalSearchTests : BaseTest
+    [TestFixture]
+    public class GlobalSearchTests : BaseTest
     {
         [TestCase("BLOCKCHAIN")]
         [TestCase("Cloud")]
         [TestCase("Automation")]
-        public void GlobalSearch_ShouldReturnExpectedResults(string searchTerm)
+        public void GlobalSearch_ShouldReturnExpectedResults (string searchTerm)
         {
             var links = indexPage
                 .Open()

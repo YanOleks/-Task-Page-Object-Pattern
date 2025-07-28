@@ -3,6 +3,7 @@ using OpenQA.Selenium;
 
 namespace _Task__Page_Object_Pattern
 {
+    [TestFixture]
     public class CareerTests : BaseTest
     {      
         [TestCase("Java", "All Locations")]
