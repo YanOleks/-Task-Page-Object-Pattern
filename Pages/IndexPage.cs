@@ -16,6 +16,7 @@ namespace _Task__Page_Object_Pattern.Pages
         private readonly By searchFieldBy = By.Id("new_form_search");
         private readonly By findButtonBy = By.CssSelector(".search-results__action-section > button");
         private readonly By aboutLinkBy = By.LinkText("About");
+        private readonly By insightsLinkBy = By.LinkText("Insights");
 
         public IndexPage Open()
         {
@@ -64,6 +65,12 @@ namespace _Task__Page_Object_Pattern.Pages
         {
             driver.FindElement(aboutLinkBy).Click();
             return new AboutPage(driver);
+        }
+
+        public InsightsPage ClickInsightsLink()
+        {
+            driver.FindElement(insightsLinkBy).Click();
+            return new InsightsPage(driver);
         }
     }
 }
